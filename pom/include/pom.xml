@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.apache.thrift</groupId>
+  <artifactId>thrift-include</artifactId>
+  <version>0.9.1</version>
+  <packaging>pom</packaging>
+  <description>The Apache Thrift software framework, for scalable cross-language services development.</description>
+
+  <parent>
+    <groupId>com.apriorit.assembly</groupId>
+    <artifactId>superpom</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.boost</groupId>
+      <artifactId>boost-include</artifactId>
+      <version>1.55.0</version>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+
+</project>

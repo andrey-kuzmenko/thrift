@@ -1,0 +1,15 @@
+<assembly>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <directory>../../lib/cpp/x64/Release</directory>
+      <includes>
+        <include>*.lib</include>
+      </includes>
+      <outputDirectory>/</outputDirectory>
+    </fileSet>
+  </fileSets>
+</assembly>

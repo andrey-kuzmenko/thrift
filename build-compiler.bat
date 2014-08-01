@@ -1,0 +1,1 @@
+mvn -f ./pom/compiler-x86-windows-release/pom.xml deploy

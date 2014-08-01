@@ -1,0 +1,15 @@
+<assembly>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <fileSet>
+      <directory>../../compiler/cpp/Release</directory>
+      <outputDirectory>/</outputDirectory>
+      <includes>
+        <include>thrift.exe</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>
