@@ -35,23 +35,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\thrift\async\TAsyncChannel.cpp"/>
+    <ClCompile Include="src\thrift\async\TAsyncChannel.cpp" />
     <ClCompile Include="src\thrift\concurrency\BoostMonitor.cpp" />
     <ClCompile Include="src\thrift\concurrency\BoostMutex.cpp" />
     <ClCompile Include="src\thrift\concurrency\BoostThreadFactory.cpp" />
-    <ClCompile Include="src\thrift\concurrency\ThreadManager.cpp"/>
-    <ClCompile Include="src\thrift\concurrency\TimerManager.cpp"/>
-    <ClCompile Include="src\thrift\concurrency\Util.cpp"/>
-    <ClCompile Include="src\thrift\processor\PeekProcessor.cpp"/>
+    <ClCompile Include="src\thrift\concurrency\ThreadManager.cpp" />
+    <ClCompile Include="src\thrift\concurrency\TimerManager.cpp" />
+    <ClCompile Include="src\thrift\concurrency\Util.cpp" />
+    <ClCompile Include="src\thrift\processor\PeekProcessor.cpp" />
     <ClCompile Include="src\thrift\protocol\TBase64Utils.cpp" />
-    <ClCompile Include="src\thrift\protocol\TDebugProtocol.cpp"/>
-    <ClCompile Include="src\thrift\protocol\TDenseProtocol.cpp"/>
-    <ClCompile Include="src\thrift\protocol\TJSONProtocol.cpp"/>
-    <ClCompile Include="src\thrift\server\TSimpleServer.cpp"/>
-    <ClCompile Include="src\thrift\server\TThreadPoolServer.cpp"/>
-    <ClCompile Include="src\thrift\TApplicationException.cpp"/>
-    <ClCompile Include="src\thrift\Thrift.cpp"/>
-    <ClCompile Include="src\thrift\transport\TBufferTransports.cpp"/>
+    <ClCompile Include="src\thrift\protocol\TDebugProtocol.cpp" />
+    <ClCompile Include="src\thrift\protocol\TDenseProtocol.cpp" />
+    <ClCompile Include="src\thrift\protocol\TJSONProtocol.cpp" />
+    <ClCompile Include="src\thrift\server\TSimpleServer.cpp" />
+    <ClCompile Include="src\thrift\server\TThreadPoolServer.cpp" />
+    <ClCompile Include="src\thrift\TApplicationException.cpp" />
+    <ClCompile Include="src\thrift\Thrift.cpp" />
+    <ClCompile Include="src\thrift\transport\TBufferTransports.cpp" />
     <ClCompile Include="src\thrift\transport\TFDTransport.cpp" />
     <ClCompile Include="src\thrift\transport\TFileTransport.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -61,12 +61,12 @@
     </ClCompile>
     <ClCompile Include="src\thrift\transport\THttpClient.cpp" />
     <ClCompile Include="src\thrift\transport\THttpServer.cpp" />
-    <ClCompile Include="src\thrift\transport\THttpTransport.cpp"/>
+    <ClCompile Include="src\thrift\transport\THttpTransport.cpp" />
     <ClCompile Include="src\thrift\transport\TPipe.cpp" />
     <ClCompile Include="src\thrift\transport\TPipeServer.cpp" />
-    <ClCompile Include="src\thrift\transport\TServerSocket.cpp"/>
+    <ClCompile Include="src\thrift\transport\TServerSocket.cpp" />
     <ClCompile Include="src\thrift\transport\TSimpleFileTransport.cpp" />
-    <ClCompile Include="src\thrift\transport\TSocket.cpp"/>
+    <ClCompile Include="src\thrift\transport\TSocket.cpp" />
     <ClCompile Include="src\thrift\transport\TSSLSocket.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug-mt|Win32'">true</ExcludedFromBuild>
@@ -77,8 +77,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release-mt|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\thrift\transport\TTransportException.cpp"/>
-    <ClCompile Include="src\thrift\transport\TTransportUtils.cpp"/>
+    <ClCompile Include="src\thrift\transport\TTransportException.cpp" />
+    <ClCompile Include="src\thrift\transport\TTransportUtils.cpp" />
     <ClCompile Include="src\thrift\windows\GetTimeOfDay.cpp" />
     <ClCompile Include="src\thrift\windows\SocketPair.cpp" />
     <ClCompile Include="src\thrift\windows\TWinsockSingleton.cpp" />
@@ -239,6 +239,7 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ProgramDataBaseFileName>$(IntDir)libthrift.pdb</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -253,6 +254,7 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ProgramDataBaseFileName>$(IntDir)libthrift.pdb</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -265,6 +267,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -278,6 +281,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -293,6 +297,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ProgramDataBaseFileName>$(IntDir)libthrift.pdb</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -311,6 +316,7 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ProgramDataBaseFileName>$(IntDir)libthrift.pdb</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -327,6 +333,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -344,6 +351,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>HAVE_CONFIG_H=1;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(DEPENDENCY_ROOT)\org\boost\boost-include\1.55.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
