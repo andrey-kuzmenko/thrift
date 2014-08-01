@@ -37,13 +37,11 @@ gen-*
 /compiler/cpp/libparse.a
 /compiler/cpp/Makefile
 /compiler/cpp/Makefile.in
-/compiler/cpp/src/windows/version.h
 /compiler/cpp/thrift
 /compiler/cpp/thriftl.cc
 /compiler/cpp/thrifty.cc
 /compiler/cpp/thrifty.h
 /compiler/cpp/thrifty.hh
-/compiler/cpp/version.h
 /config.*
 /configure
 /configure.lineno
@@ -293,3 +291,8 @@ gen-*
 /tutorial/rb/Makefile.in
 /ylwrap
 
+/compiler/cpp/Release
+/compiler/cpp/Debug
+/compiler/cpp/src/thriftl.cc
+/compiler/cpp/src/thrifty.cc
+/compiler/cpp/src/thrifty.hh
