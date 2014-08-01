@@ -1,0 +1,44 @@
+ lib/cpp/src/thrift/protocol/TProtocol.h | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+diff --git a/lib/cpp/src/thrift/protocol/TProtocol.h b/lib/cpp/src/thrift/protocol/TProtocol.h
+index d6ecc0f..d48dfe0 100644
+--- a/lib/cpp/src/thrift/protocol/TProtocol.h
++++ b/lib/cpp/src/thrift/protocol/TProtocol.h
+@@ -34,6 +34,9 @@
+ #include <map>
+ #include <vector>
+ 
++#ifdef HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
+ 
+ // Use this to get around strict aliasing rules.
+ // For example, uint64_t i = bitwise_cast<uint64_t>(returns_double());
+@@ -74,15 +77,6 @@ static inline To bitwise_cast(From from) {
+   return u.t;
+ }
+ 
+-
+-namespace apache { namespace thrift { namespace protocol {
+-
+-using apache::thrift::transport::TTransport;
+-
+-#ifdef HAVE_SYS_PARAM_H
+-#include <sys/param.h>
+-#endif
+-
+ #ifndef __THRIFT_BYTE_ORDER
+ # if defined(BYTE_ORDER) && defined(LITTLE_ENDIAN) && defined(BIG_ENDIAN)
+ #  define __THRIFT_BYTE_ORDER BYTE_ORDER
+@@ -140,6 +134,10 @@ using apache::thrift::transport::TTransport;
+ # error "Can't define htonll or ntohll!"
+ #endif
+ 
++namespace apache { namespace thrift { namespace protocol {
++
++using apache::thrift::transport::TTransport;
++
+ /**
+  * Enumerated definition of the types that the Thrift protocol supports.
+  * Take special note of the T_END type which is used specifically to mark

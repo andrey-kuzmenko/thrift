@@ -1,0 +1,23 @@
+ compiler/cpp/src/generate/t_cpp_generator.cc | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/compiler/cpp/src/generate/t_cpp_generator.cc b/compiler/cpp/src/generate/t_cpp_generator.cc
+index 523ce24..3da6145 100644
+--- a/compiler/cpp/src/generate/t_cpp_generator.cc
++++ b/compiler/cpp/src/generate/t_cpp_generator.cc
+@@ -2473,12 +2473,14 @@ void t_cpp_generator::generate_service_client(t_service* tservice, string style)
+       string argsname = tservice->get_name() + "_" + (*f_iter)->get_name() + "_pargs";
+       string resultname = tservice->get_name() + "_" + (*f_iter)->get_name() + "_presult";
+ 
++      string requestType = (*f_iter)->is_oneway() ? "T_ONEWAY" : "T_CALL";
++
+       // Serialize the request
+       out <<
+         indent() << "int32_t cseqid = 0;" << endl <<
+         indent() << _this << "oprot_->writeMessageBegin(\"" <<
+         (*f_iter)->get_name() <<
+-        "\", ::apache::thrift::protocol::T_CALL, cseqid);" << endl <<
++        "\", ::apache::thrift::protocol::"<< requestType <<", cseqid);" << endl <<
+         endl <<
+         indent() << argsname << " args;" << endl;
+ 
